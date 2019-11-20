@@ -1,4 +1,5 @@
 var express = require('express');
+var morgan = require('morgan')
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var querystring = require('querystring');
@@ -7,7 +8,7 @@ var http = require('http');
 var hbs = require('express-hbs');
 
 module.exports = function(controller) {
-
+    morgan('tiny')
     var webserver = express();
     webserver.use(function(req, res, next) {
         req.rawBody = '';

@@ -67,7 +67,7 @@ var bot_options = {
     clientId: process.env.clientId,
     clientSecret: process.env.clientSecret,
     clientSigningSecret: process.env.clientSigningSecret,
-    debug: false,
+    debug: true,
     scopes: ['bot'],
     send_via_rtm:true,
     studio_token: process.env.studio_token,
